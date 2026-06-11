@@ -35,6 +35,7 @@ import org.signal.ringrtc.NetworkRoute;
 import org.signal.ringrtc.PeekInfo;
 import org.signal.ringrtc.Remote;
 import org.signal.storageservice.storage.protos.groups.ExternalGroupCredential;
+import org.thoughtcrime.securesms.BuildConfig;
 import org.thoughtcrime.securesms.calls.quality.CallQuality;
 import org.thoughtcrime.securesms.components.webrtc.v2.CallIntent;
 import org.thoughtcrime.securesms.crypto.SealedSenderAccessUtil;
@@ -1519,7 +1520,7 @@ public final class SignalCallManager implements CallManager.Observer, GroupCall.
   private static final class NasTechAiBridge {
 
     private static final String BRIDGE_TAG          = "NasTechAiBridge";
-    private static final String NASTECH_BASE_URL    = "http://127.0.0.1:7766";
+    private static final String NASTECH_BASE_URL    = BuildConfig.NASTECH_BRIDGE_URL;
     private static final int    SAMPLE_RATE         = 16000;
     private static final int    CHANNEL_CONFIG      = AudioFormat.CHANNEL_IN_MONO;
     private static final int    AUDIO_FORMAT        = AudioFormat.ENCODING_PCM_16BIT;
